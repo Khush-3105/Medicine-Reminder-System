@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cont {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            /* border: 2px solid red; */
+            height: 450px;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .innerCont {
+            display: flex;
+            flex-direction: row;
+            /* border: 2px solid black; */
+            height: 300px;
+            width: 100vw;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .Form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            row-gap: 10px;
+            height: 350px;
+            width: 40vw;
+            /* border: 2px solid red; */
+        }
+
+        .Form h3 {
+            margin-top: 15px;
+            margin-left: 210px;
+        }
+
+        .viewReminders {
+            display: flex;
+            flex-direction: column;
+            height: 250px;
+            width: 40vw;
+            /* border: 2px solid red; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .showReminderbtn {
+            margin-top: 20px;
+            width: 10rem;
+            height: 2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgba(0, 238, 255, 0.705);
+            font-weight: bold;
+        }
+
+        form {
+            display: grid;
+            margin-left: 50px;
+        }
+
+        .showReminderbtn:hover {
+            color: rgba(0, 0, 0, 0.432);
+        }
+
+        .submit {
+            width: 7rem;
+            height: 2rem;
+            border: none;
+            margin-left: 16vw;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgba(0, 238, 255, 0.705);
+            font-weight: bold;
+        }
+
+        .submit:hover {
+            color: rgba(0, 0, 0, 0.432);
+        }
+
+        #problem {
+            height: 50px;
+            width: 500px;
+        }
+
+        #severity {
+            height: 30px;
+            width: 500px;
+        }
+
+        .myReminders {
+            font-size: 1.2rem;
+            /* border: 2px solid red; */
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .reminders
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .reminderBox 
+        {
+            /* border: 2px solid red; */
+            display: none;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="innerContainer1">
+            <img src="/Images/Logo.png" alt="Failed To Load" class="logo">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="https://www.google.co.in">Services</a></li>
+                <li><a href="https://www.google.co.in">About Us</a></li>
+            </ul>
+        </div>
+        <div class="innerContainer2">
+            <input type="text" name="" id="SearchBox" placeholder="Search the website">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+    <div class="cont">
+        <h2 id="userName">Welcome, User</h2>
+        <div class="innerCont">
+            <div class="Form">
+                <h3>Details Of Your Condition</h3>
+                <form>
+                    <label for="problem">Describe Your Illness</label><br>
+                    <input type="text" id="problem" name="problem"><br>
+                    <label for="severity">Severity of The Illness</label><br>
+                    <select name="severity" id="severity">
+                        <option value="Mild">Mild</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Severe">Severe</option>
+                        <option value="Very Severe">Very Severe</option>
+                    </select>
+                    <br><br>
+                </form>
+                <button class="submit">Submit</button>
+            </div>
+            <div class="viewReminders">
+                <h3>Click Here To View Your Prescriptions</h3>
+                <button class="showReminderbtn">Show Prescription</button>
+            </div>
+        </div>
+    </div>
+    <h2 class="myReminders">My Reminders</h2>
+    <div class="reminderBox"></div>
+    <script src="UserHomePage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            /* border: 2px solid black; */
+            height: 50px;
+        }
+        .signUpContainer{
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 4rem;
+        }
+        .signUpContainer h1{
+            font-size: 1.7rem;
+        }
+        .signUp{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background-color: rgb(0, 225, 255); */
+            /* border: 2px solid red; */
+            width: 400px;
+            height: 400px;
+            justify-content: space-evenly;
+            
+        }
+        #userLoginButton{
+            background-color: aqua;
+            border: 2px solid grey;
+            display: relative;
+            width: 10rem;
+            height: 3rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: bold;
+
+        }
+        #doctorLoginButton{
+            background-color: aqua;
+            border: 2px solid grey;
+            display: relative;
+            width: 10rem;
+            height: 3rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-weight: bold;
+
+        }
+        .userLoginButton:hover{
+            border: 2px solid black;
+        }
+        .doctorLoginButton:hover{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="innerContainer1">
+            <img src="/Images/Logo.png" alt="Failed To Load" class="logo">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="https://www.google.co.in">Services</a></li>
+                <li><a href="https://www.google.co.in">About Us</a></li>
+            </ul>
+        </div>
+        <div class="innerContainer2">
+            <input type="text" name="" id="SearchBox" placeholder="Search the website">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Welcome to MedBuddy,Your Pill Reminder</h1>
+    </div>
+    <div class="signUpContainer">
+        <div class="signUp">
+            <h1>For Users</h1>
+            <button id="userLoginButton" value="user">Login / Signup</button>
+        </div>
+        <div class="signUp">
+            <h1>For Doctors</h1>
+            <button id="doctorLoginButton" value="doctor">Login / Signup</button>
+        </div>
+    </div>
+</body>
+ <script>
+     var logo=document.querySelector(".logo").addEventListener("click",()=>{
+        location.href="Home.html";
+     })
+     var userloginButton=document.getElementById("userLoginButton").addEventListener("click",()=>{
+        location.href="UserSignUp.html";
+     })
+     var doctorloginButton=document.getElementById("doctorLoginButton").addEventListener("click",()=>{
+        location.href="DoctorSignUp.html";
+     })
+ </script>
+</html>
